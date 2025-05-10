@@ -70,6 +70,7 @@
     margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
   }
   
   .task-list-item:hover {
@@ -81,9 +82,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-  }
 
-    .completed {
+  }
+.completed {
     text-decoration: line-through;
     color: #888;
   }
@@ -105,3 +106,16 @@
   .tasksDiv {
     background-color: transparent !important;
   }
+
+span, li{
+  padding-right: 15px;
+}
+
+.custom-checkbox {
+  flex-shrink: 0;
+  align-self: center; 
+}
+
+#deleteAllButton:hover {
+  background-color: #ad001a !important;
+}

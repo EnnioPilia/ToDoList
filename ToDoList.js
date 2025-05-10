@@ -34,6 +34,7 @@ class ListTask {
 
   displayArray() {
     this.tasksDiv.innerHTML = "";
+    this.input.value = "";
 
     this.tasks.forEach((task, index) => {
       const newTask = document.createElement("li");
@@ -144,6 +145,11 @@ class ListTask {
     this.tasks = [];
     this.displayArray();
     this.saveTasksToLocalStorage();
+    this.input.value = "";
+    
+    this.divBtn = document.getElementById("divBtn");
+    this.divBtn.classList.remove("d-flex");
+    this.divBtn.classList.add("d-none");
   }
 }
 
@@ -166,4 +172,5 @@ markAllBtn.addEventListener("click", (e) => {
 deleteAllBtn.addEventListener("click", (e) => {
   e.preventDefault();
   myListTask.deleteAllTasks();
+
 });
